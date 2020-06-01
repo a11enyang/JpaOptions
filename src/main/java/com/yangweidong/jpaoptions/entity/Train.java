@@ -25,7 +25,6 @@ public class Train {
     private Trip trainTrip;
 
 
-
     public Trip getTrainTrip() {
         return trainTrip;
     }

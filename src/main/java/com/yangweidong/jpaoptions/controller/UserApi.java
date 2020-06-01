@@ -174,29 +174,29 @@ public class UserApi {
         List<SearchResult>   results  =  searchProcess.searchRoute(begin,end);
         System.out.println(results.get(0).getRemainSeats());
 
-        //下一步需要找出最右边的0的位置  可以可以进行封装
-        int postion = 0;
-        while (seatBinaryNumber != 0 && postion != 3){
-            if ((seatBinaryNumber & 1) == 0){
-                System.out.println(postion);
-                break;
-            }
-            postion ++;
-            seatBinaryNumber = seatBinaryNumber >> 1;
-        }
-        result.setWhetherHaveSeat(whetherHaveSeat);
-
-        //将座位表的位置设置为1
-        for (Seat seat :  seatList){
-//            seat.setSeatBinaryNumber(String.valueOf((Integer.parseUnsignedInt(seat.getSeatBinaryNumber(), 2) & (1 << postion))));
-            char[] s = seat.getSeatBinaryNumber().toCharArray();
-            s[3 -postion] = '1';
-            seat.setSeatBinaryNumber(String.valueOf(s));
-        }
-
-
-
-        System.out.println(result);
+//        //下一步需要找出最右边的0的位置  可以可以进行封装
+//        int postion = 0;
+//        while (seatBinaryNumber != 0 && postion != 3){
+//            if ((seatBinaryNumber & 1) == 0){
+//                System.out.println(postion);
+//                break;
+//            }
+//            postion ++;
+//            seatBinaryNumber = seatBinaryNumber >> 1;
+//        }
+//        result.setWhetherHaveSeat(whetherHaveSeat);
+//
+//        //将座位表的位置设置为1
+//        for (Seat seat :  seatList){
+////            seat.setSeatBinaryNumber(String.valueOf((Integer.parseUnsignedInt(seat.getSeatBinaryNumber(), 2) & (1 << postion))));
+//            char[] s = seat.getSeatBinaryNumber().toCharArray();
+//            s[3 -postion] = '1';
+//            seat.setSeatBinaryNumber(String.valueOf(s));
+//        }
+//
+//
+//
+//        System.out.println(result);
     }
 
 }

@@ -107,6 +107,20 @@
         </dependency>
         <!--        热部署 end-->
 
+<!--        安全模块begin-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+<!--        安全模板end-->
+
+<!--        jwtToken begin-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+<!--        jwtToken-->
         <!--        end-->
     </dependencies>
 

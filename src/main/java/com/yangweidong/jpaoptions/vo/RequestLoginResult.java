@@ -1,6 +1,6 @@
 package com.yangweidong.jpaoptions.vo;
 
-public class AfterBuy {
+public class RequestLoginResult {
     private String s;
     private Meta meta;
 
@@ -20,3 +20,4 @@ public class AfterBuy {
         this.s = s;
     }
 }
+

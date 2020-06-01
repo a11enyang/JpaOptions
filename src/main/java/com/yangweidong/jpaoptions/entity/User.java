@@ -7,46 +7,26 @@ import java.io.Serializable;
 @Table(name = "t_user")
 public class User implements Serializable {
     @Id
-    @Column(name = "c_id")
+    @Column(name = "c_user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int id;
+    public int userId;//用户id
 
-    @Column(name = "c_name")
-    public String name;
+    @Column(name = "c_user_id_card")
+    public String userID;//用户的身份证
 
-    @Column(name = "c_age")
-    public int age;
+    @Column(name = "c_user_name")
+    public String userName;//用户的名字
 
-    public int getId() {
-        return id;
-    }
+    @Column(name = "c_user_gender")
+    public String userGender;//用户的性别
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    @Column(name = "c_user_phone_number")
+    public String userPhoneNumber;//用户的手机号
 
-    public String getName() {
-        return name;
-    }
+    @Column(name = "c_user_is_student")
+    public boolean userIsStudent;//用户是否为学生
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Column(name = "c_user_is_allowed")
+    public boolean userIsAllowed;//用户是否被允许使用这个系统
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
 }
